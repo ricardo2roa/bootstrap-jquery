@@ -1,0 +1,24 @@
+{
+  "name": "hvk3ls0heei1swqhfvfp2a_1fd677102d0711e8a11f3f5f282cfd8b_aboutus.html",
+  "version": "1.0.0",
+  "description": "Primer Tarea",
+  "main": "index.html",
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "bootstrap-social": "^5.1.1",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.6.0",
+    "popper.js": "^1.16.1"
+  },
+  "devDependencies": {
+    "bootstrap": "^5.1.3",
+    "lite-server": "^2.6.1"
+  },
+  "scripts": {
+    "start": "npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server"
+  },
+  "author": "Ricardo Roa",
+  "license": "ISC"
+}
