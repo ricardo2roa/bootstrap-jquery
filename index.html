@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
-   <link rel="stylesheet" href="css/styles_old.css">
+   <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
@@ -31,7 +31,7 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="btn-login"> <!--data-toggle="modal" data-target="#loginModal"-->
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -46,7 +46,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Login</h4>
-                    <button type="button" class="close" data-dismiss="modal">
+                    <button id="btn-closelogin" type="button" class="close"> <!--data-dismiss="modal">-->
                         &times;
                     </button>
                 </div>
@@ -86,7 +86,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Reserve a Table</h4>
-                    <button type="button" class="close" data-dismiss="modal">
+                    <button id="btn-close" type="button" class="close"> <!-- data-dismiss="modal">-->
                         &times;
                     </button>
                 </div>
@@ -152,14 +152,14 @@
                             <div class="col-12 col-md-3 mr-4 mb-2 mb-md-0 mt-3">
                                 <p>Date and Time</p>
                             </div>
-                            <div class="col-12 col-md-6 ml-4 ml-md-0 mt-3">
+                            <div class="col-12 col-md-6 ml-md-0 mt-3">
                                 <div class="input-group">
-                                    <input type="text" aria-label="Date" class="form-control" placeholder="Date">
+                                    <input type="text" aria-label="Date" class="form-control mr-md-4" placeholder="Date">
                                     <input type="text" aria-label="Time" class="form-control" placeholder="Time">
                                 </div>
                             </div>
 
-                            <div class="offset-md-3 col-auto mt-3">
+                            <div class="offset-md-3 col-auto mt-5 mb-3">
                                 <button type="button" class="btn btn-secondary ml-4" data-dismiss="modal">Cancel</button>
                                 <button type="button" class="btn btn-primary">Reserve</button>
                             </div>
@@ -188,7 +188,7 @@
                        title="Or Call us <br><strong>+852 12345678</strong>>"
                        data-placement="bottom"
                        href="#reserva">Reserve Table</a>-->
-                    <a class="btn btn-warning form-control mt-2" data-toggle="modal" data-target="#reservaModal">Reserve Table</a>
+                    <a id="btn-reserva" class="btn btn-warning form-control mt-2">Reserve Table</a> <!--data-toggle="modal" data-target="#reservaModal"-->
                 </div>
             </div>
         </div>
@@ -441,6 +441,18 @@
             $('#carousel-play').click(function(){
                 $('#mycarousel').carousel('cycle'); //Si se hace click sobre el boton se reanuda el carusel
             });*/
+            $("#btn-reserva").click(function(){
+                $("#reservaModal").modal("show");
+            });
+            $("#btn-login").click(function(){
+                $("#loginModal").modal("show");
+            });
+            $("#btn-close").click(function () {
+               $("#reservaModal").modal("hide");
+            });
+            $("#btn-closelogin").click(function () {
+                $("#loginModal").modal("hide");
+            });
         });
     </script>
 </body>
