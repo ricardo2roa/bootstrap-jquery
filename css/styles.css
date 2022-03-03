@@ -65,3 +65,8 @@ body {
     color: floralwhite; }
   .modal-header button:hover {
     color: floralwhite; }
+
+#btn-reserva {
+  color: white;
+  font-size: 18px;
+  font-weight: bolder; }
