@@ -73,3 +73,11 @@ body {
 
 #carouselButton {
   z-index: 1000; }
+
+.boton-reserve {
+  background-color: #f8bb23;
+  color: whitesmoke; }
+
+.boton-reserve:hover {
+  background-color: #d99008;
+  color: white; }
